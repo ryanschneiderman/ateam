@@ -1,0 +1,13 @@
+service: basketball-stats-service
+
+provider:
+  name: aws
+  runtime: dotnet7
+
+functions:
+  PlayerStatsService:
+    handler: src/Services/PlayerStatsService::PlayerStatsService.LambdaEntryPoint::FunctionHandlerAsync
+  TeamStatsService:
+    handler: src/Services/TeamStatsService::TeamStatsService.LambdaEntryPoint::FunctionHandlerAsync
+  GameStatsService:
+    handler: src/Services/GameStatsService::GameStatsService.LambdaEntryPoint::FunctionHandlerAsync
